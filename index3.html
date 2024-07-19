@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <!-- Navigation bar -->
+     <nav>
+        <a href="/">
+            <img src="express1-removebg-preview.png" alt="logo"></a>        
+                <!-- navigation menu -->
+                <div class="menu">
+                <ul>
+                    <a href="#"> <li>What is VPN</li></a>
+                    <a href="/"><li>What we Offer</li></a>
+                   <a href="/"> <li>Download VPN</li></a>
+                    <a href="index2.html" target="_blank"><li>Support</li></a>
+                    <a href="index3.html" target="_blank"><li>Blog</li></a>
+                    <a href="/"><li>My Account</li></a>
+                    <a href="/"><li><i class="fa-solid fa-globe"></i>English</li></a>
+                    <a href="/"><button class="btn">Get Started</button></a>
+         
+                </ul>
+            </div>
+               
+            </nav>
+      
+            <div class="nav_container">
+                <li><div class="latest">LATEST</div></li>
+                <li><div class="privacy">PRIVACY NEWS</div></li>
+                <li><div class="tips">TIPS AND TRICKS</div></li>
+                <li><div class="streaming">STREAMING</div></li>
+                <li><div class="news">EXPRESSVPN NEWS</div></li>
+                <li><div class="videoes">VIDEOS</div></li>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            </div>
+
+         <div class="hero">
+            <div class="left1">
+          <div class="breadcrumb">
+            <a href="index.html"><i class="fa-solid fa-house"></i> 
+            <i class="fa-solid fa-chevron-right"></i></a>
+            <span id="blog">Blog</span>
+          </div>
+         <h1 class="font-serif">EXPRESSVPN blog</h1>
+
+         <h6 class="font-serif">Your destination for privacy news, how-to guides, and the latest on our VPN tech </h6>
+
+        </div>
+
+            <div class="right1">
+
+        <img src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img/https://s22908.pcdn.co/wp-content/themes/newspaper-child/images/Streaming-wider.png" alt="reading">
+            </div>
+         
+        </div>
+
+        <!-- -------blog_container------ -->
+
+        <div class="blog_container mx-10">
+            <div class="card1_header flex justify-between align-center">
+                <h1 class="py-6 text-xl font-medium">Latest Posts</h1>
+                <h1 class="py-6 text-sm font-light">SEE ALL</h1>
+            </div>
+            <div class="card1_details  flex" style="box-shadow: 0px 5px 5px 15px rgb(0 0 0 / 0.1), 0px 5px 5px 15px rgb(0 0 0 / 0.1);">
+                <div class="  left2  w-1/2 ">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuUAAAHmCAYAAADURvDNAAAgAElEQVR4Xu3dT8h1x30f8Cc7gWSDkEwiGVcVOFIXkQwxVBIkWFBEBHWhBBqwtqkKXbhuN4YurIW6CHjTul0YamWrQgtF0BYUhEClBdkCF6poESUGRTLWm+AEg+RAdq3ntUc+urr3zm/OmTlzzr2fZyNZz7nz5zPzJN8zd86cX/nTv7j1/278ECBAgAABAgQIECAwTOBXhPJh9iomQIAAAQIECBAgcFtAKDcRCBAgQIAAAQIECAwWEMoHD4DqCRAgQIAAAQIECAjl5gABAgQIECBAgACBwQJC+eABUD0BAgQIECBAgAABodwcIECAAAECBAgQIDBYQCgfPACqJ0CAAAECBAgQICCUmwMECBAgQIAAAQIEBgsI5YMHQPUECBAgQIAAAQIEhHJzgAABAgQIECBAgMBgAaF88ACongABAgQIECBAgIBQbg4QIECAAAECBAgQGCwglA8eANUTIECAAAECBAgQEMrNAQIECBAgQIAAAQKDBYTywQOgegIECBAgQIAAAQJCuTlAgAABAgQIECBAYLCAUD54AFRPgAABAgQIECBAQCg3BwgQIECAAAECBAgMFhDKBw+A6gkQIECAAAECBAgI5eYAAQIECBAgQIAAgcECQvngAVA9AQIECBAgQIAAAaHcHCBAgAABAgQIECAwWEAoHzwAqidAgAABAgQIECAglJsDBAgQIECAAAECBAYLCOWDB0D1BAgQIECAAAECBIRyc4AAAQIECBAgQIDAYAGhfPAAqJ4AAQIECBAgQICAUG4OECBAgAABAgQIEBgsIJQPHgDVEyBAgAABAgQIEBDKzQECBAgQIECAAAECgwWE8sEDoHoCBAgQIECAAAECQrk5QIAAAQIECBAgQGCwgFA+eABUT4AAAQIECBAgQEAoNwcIECBAgAABAgQIDBYQygcPgOoJECBAgAABAgQICOXmAAECBAgQIECAAIHBAkL54AFQPQECBAgQIECAAAGh3BwgQIAAAQIECBAgMFhAKB88AKonQIAAAQIECBAgIJSbAwQIECBAgAABAgQGCwjlgwdA9QQIECBAgAABAgSEcnOAAAECBAgQIECAwGABoXzwAKieAAECBAgQIECAgFBuDhAgQIAAAQIECBAYLCCUDx4A1RMgQIAAAQIECBAQys0BAgQIECBAgAABAoMFhPLBA6B6AgQIECBAgAABAkK5OUCAAAECBAgQIEBgsIBQPngAVE+AAAECBAgQIEBAKDcHCBAgQIAAAQIECAwWEMoHD4DqCRAgQIAAAQIECAjl5gABAgQIECBAgACBwQJC+eABUD0BAgQIECBAgAABodwcIECAAAECBAgQIDBYQCgfPACqJ0CAAAECBAgQICCUmwMECBAgQIAAAQIEBgsI5YMHQPUECBAgQIAAAQIEhHJzgAABAgQIECBAgMBgAaF88ACongABAgQIECBAgIBQbg4QIECAAAECBAgQGCwglA8eANUTIECAAAECBAgQEMrNAQIECBAgQIAAAQKDBYTywQOgegIECBAgQIAAAQJCuTlAgAABAgQIECBAYLCAUD54AFRPgAABAgQIECBAQCg3BwgQIECAAAECBAgMFhDKBw+A6gkQIECAAAECBAgI5eYAAQIECBAgQIAAgcECQvngAVA9AQIECBAgQIAAAaHcHCBAgAABAgQIECAwWEAoHzwAqidAgAABAgQIECAglJsDBAgQIECAAAECBAYLCOWDB0D1BAgQIECAAAECBIRyc4AAAQIECBAgQIDAYAGhfPAAqJ4AAQIECBAgQICAUG4OECBAgAABAgQIEBgsIJQPHgDVEyBAgAABAgQIEBDKzQECBAgQIECAAAECgwWE8sEDoHoCBAgQIECAAAECQrk5QIAAAQIECBAgQGCwgFA+eABUT4AAAQIECBAgQEAoNwcIECBAgAABAgQIDBYQygcPgOoJECBAgAABAgQICOXmAAECBAgQIECAAIHBAkL54AFQPQECBAgQIECAAAGh3BwgQIAAAQIECBAgMFhAKB88AKonQIAAAQIECBAgIJSbAwQIECBAgAABAgQGCwjlgwdA9QQIECBAgAABAgSEcnOAAAECBAgQIECAwGABoXzwAKieAAECBAgQIECAgFBuDhAgQIAAAQIECBAYLCCUDx4A1RMgQIAAAQIECBAQys0BAgQIECBAgAABAoMFhPLBA6B6AgQIECBAgAABAkK5OUCAAAECBAgQIEBgsIBQPngAVE+AAAECBAgQIEBAKDcHCBAgQIAAAQIECAwWEMoHD4DqCRAgQIAAAQIECAjl5gABAgQIECBAgACBwQJC+eABUD0BAgQIECBAgAABodwcIECAAAECBAgQIDBY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CBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SNxLH3AAACLJJREFUCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQFhPIikQsIECBAgAABAgQI9BUQyvv6Kp0AAQIECBAgQIBAUUAoLxK5gAABAgQIECBAgEBfAaG8r6/SCRAgQIAAAQIECBQF/j/9or6JLf0aWQAAAABJRU5ErkJggg==" alt="www_pic">
+                </div>
+                <div class="right2">
+                <div class="card1_docs">
+              <h1 class="heading1">
+                <span class="pen flex justify-between align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">HASAN TARIQ</span>
+                <span ><i class="fa-regular fa-calendar mx-2"></i>28.05.2024</span>
+                <span class=" clock flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>28 MINS</span>  
+            </h1>
+              
+            <h1 class="heading2 ">
+                Types of web  <br> browsers: Which one <br> should you use in 2024?
+            </h1>
+
+            <h1 class="heading3">
+                From graphic-intensive to privacy-focused browsers, discover <br> the different types of web browsers and find the best one for <br> you.
+            </h1>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+<br>
+
+<!-- -------------latest_posts----------- -->
+<div class="latest_posts">
+    <div class="left55">
+ <div class="top55">
+    <img  src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/Blog_Banners-2-741x486.png" alt="VPN">
+ </div>
+
+ <div class="bottom55">
+    <h1 class=" heading_f1 flex text-sm gap-10 justify-left  align-center">
+        <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">FELIPE ALLENDE</span>
+        <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>27.05.2024</span>
+        <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>8 MINS</span>  
+     </h1>
+ 
+     <h1 class="VPN_iPhone">What is a VPN on iPhone and why <br> you need one...</h1>
+     <h1 class="pl-4">iPhones are strong on privacy, but that doesn’t mean your data <br> transmissions are safe.</h1>
+     
+ </div>
+    </div>
+
+    <div class="right55">
+        <div class="top55">
+      <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/Where-is-TikTok-banned-741x486.png" alt="TikTok">
+        </div>
+        
+         <div class="bottom55">
+            <h1 class=" heading_f1 flex text-sm gap-10 justify-left  align-center">
+                <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">SONJA RAATH</span>
+                <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>27.05.2024</span>
+                <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>15 MINS</span>  
+             </h1>
+         
+             <h1 class="VPN_iPhone">Complete list of countries that <br>have banned or restricted TikTok</h1>
+             <h1 class="pl-4">Plus the regions that may be planning to.</h1>
+                
+        
+         </div>
+        
+    </div>
+</div>
+
+
+<!-- <br>
+<br> -->
+
+<br>
+<!-- ----------------features---------------- -->
+<h1 class="ml-12 mb-5 font-bold text-xl">Featured</h1>
+<div class="features">
+    <div class="feature1">
+     <div class="top3">
+     <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_640/https://s22908.pcdn.co/wp-content/uploads/2016/09/Onion-websites-from-the-depths-of-the-dark-web-2.png" alt="dark_web">
+     </div>
+     <div class="bottom3 pb-3">
+     <h1 class=" heading_f1 flex justify-center align-center">
+        <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">LEXIE</span>
+        <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>04.02.2024</span>
+        <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>15 MINS</span>  
+     </h1>
+
+       <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+        Dark Web Links: The best <br> .onion and Tor sites in <br> 2024
+       </h1>
+         </div>
+    </div>
+
+    <div class="feature2">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2023/10/Tech-Friend-Edition-9-741x486.jpg" alt="dark_web">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">TECH FRIEND</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>17.10.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>8 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+                Tech Friend: 5 great <br> phones under 400 USD
+              </h1>
+                </div>
+            
+    </div>
+    <div class="feature3">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2022/11/why-data-privacy-is-important-741x486.jpg" alt="shopee">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">SONJA RAATH</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>17.10.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>13 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+                10 signs a shopping <br> website is fake
+              </h1>
+                </div>
+    </div>
+    <div class="feature4">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2022/03/evade-drone-surveillance-741x486.jpg" alt="drone_surveillance">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">SAMUEL GILZEAN</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>14.03.2022</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>6 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+                4 ways to hide from drone <br> surveillance
+              </h1>
+                </div>
+    </div>
+    <div class="feature5">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2023/05/what-is-singularity-2-741x486.jpg" alt="SINGULARITY">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">SAMUEL GILZEAN</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>27.06.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>5 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+               What is singularity in <br> AI</h1>
+                </div>
+    </div>
+    <div class="feature6">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2022/08/tips-for-tracking-luggage-741x486.jpg" alt="track_luggage">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">MARCUS TSUI</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>28.03.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>4 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+                How to track your own <br> luggage
+              </h1>
+                </div>
+    </div>
+    <div class="feature7">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2021/05/best-new-shows-movies-to-stream-may-2021-741x486.jpg" alt="movies">
+            </div>
+            <div class="bottom3 pb-3">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">GREG GOVIN</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>30.04.2024</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>9 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-4 text-xxl font-bold pl-12" style="font-size:12px;">
+               Best new shows and <br> movies to stream in  May <br> 2024
+             </h1>
+                </div>
+    </div>
+    <div class="feature8">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2023/08/is-whatsapp-safe-02-741x486.jpg" alt="whats_app">
+            </div>
+            <div class="bottom3 pb-9">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">VANEESA KO</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>04.08.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>5 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 pb-2 text-xxl font-bold pl-12" style="font-size:12px;">
+               Is WhatsApp safe?
+              </h1>
+                </div>
+    </div>
+    
+</div>
+<!-- ------------ExpressVPN News----------- -->
+ <div class="card1_header flex justify-between align-center mx-12">
+                    <h1 class="py-6 text-xl font-medium">ExpressVPN news
+                    </h1>
+                    <h1 class="py-6 text-sm font-light">SEE ALL </h1>
+                </div>
+           
+<div class="features">
+    
+    <div class="feature1">
+     <div class="top3">
+     <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/KPMG-Privacy-Policy-2-741x486.jpg" alt="KPMG_Privacy">
+     </div>
+     <div class="bottom3 pb-3">
+     <h1 class=" heading_f1 flex justify-center align-center">
+        <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">AARGON ENGEL</span>
+        <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>21.05.2024</span>
+        <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>2 MINS</span>  
+     </h1>
+
+       <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+        KPMG LLP completes new <br>assessment of <br>ExpressVPN’s Privacy <br>Policy claims
+       </h1>
+         </div>
+    </div>
+
+    <div class="feature2">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/aircove-store-launch-blog-hero-741x486.jpg" alt="ExpressVPN_Store">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">EXPRESSVPN</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>14.05.2023</span>
+               <span class=" clock2 flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>2 MINS</span>  
+            </h1>
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pb-6 pl-10" style="font-size:12px;">
+                ExpressVPN launches an <br> online store
+              </h1>
+                </div>
+            
+    </div>
+    <div class="feature3">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/vpn-tunnel-1-741x486.jpg" alt="shopee">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-center align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">EXPRESSVPN SECURITY TEAM</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>07.05.2024</span>
+            </h1>
+            <span class=" clock2 flex align-center justify-start pl-11" style="font-size: xx-small;"><i class="fa-regular fa-clock mx-2"></i>7 MINS</span>  
+
+       
+              <h1 class=" Dark pt-1 text-xxl font-bold pl-12" style="font-size:12px;">
+                TunnelVision: <br>ExpressVPN’s statement <br> and assessment of the <br>technique
+              </h1>
+                </div>
+    </div>
+    <div class="feature4">
+        <div class="top3">
+            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2024/05/osaka-vpn-741x486.jpg" alt="OSAKA">
+            </div>
+            <div class="bottom3 pb-5">
+            <h1 class=" heading_f1 flex justify-start pl-5 align-center">
+               <span class="pen2 flex justify-center align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">VANESSA KO</span>
+               <span class="calender2"><i class="fa-regular fa-calendar mx-2"></i>07.05.2024</span>
+               
+            </h1>
+            <span class=" clock2 flex align-center justify-start pl-11" style="font-size: xx-small;"><i class="fa-regular fa-clock mx-2"></i>7 MINS</span>  
+       
+              <h1 class=" Dark pt-5 text-xxl font-bold pl-12" style="font-size:12px;">
+                Welcoming Osaka as our <br> newest VPN server <br> location
+              </h1>
+                </div>
+    </div>
+</div>
+<!-- -------featured video------- -->
+<div class=" featured_video mx-10">
+            <div class="card1_header flex justify-between align-center">
+                    <h1 class="py-6 text-xl font-medium">Featured Video</h1>
+                    <h1 class="py-6 text-sm font-light">SEE ALL VIDEOS</h1>
+                </div>
+                <div class="card1_details  flex" style="box-shadow: 0px 5px 5px 15px rgb(0 0 0 / 0.1), 0px 5px 5px 15px rgb(0 0 0 / 0.1);">
+                    <div class=" sponsored_video left2  w-1/2 ">
+                        <iframe width="585" height="400" src="https://www.youtube.com/embed/7uOfHGT5p4w" title="Top games about privacy and hacking | ExpressVPN stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                    </div>
+                    <div class="right2">
+                    <!-- <div class="card1_docs">
+                  <h1 class="heading1">
+                    <span class="pen flex justify-between align-center"><img  class="w-5 h-4 mx-1"  src="https://s22908.pcdn.co/wp-content/themes/xvcommon/src/images/icons/pen-tool.svg" alt="pen">HASAN TARIQ</span>
+                    <span ><i class="fa-regular fa-calendar mx-2"></i>28.05.2024</span>
+                    <span class=" clock flex align-center justify-center"><i class="fa-regular fa-clock mx-2"></i>28 MINS</span>  
+                </h1>
+                  
+                <h1 class="heading2 ">
+                    Types of web  <br> browsers: Which one <br> should you use in 2024?
+                </h1>
+    
+                <h1 class="heading3">
+                    From graphic-intensive to privacy-focused browsers, discover <br> the different types of web browsers and find the best one for <br> you.
+                </h1>
+    
+                    </div> -->
+
+                    <h1 class="pt-10 font-serif font-bold text-2xl ">Top 10 video games that will change how <br> you view privacy</h1>
+                    <h6 class="pt-10 font-serif">Play through our picks for some of the best video games about <br> hacking, surveillance, and privacy</h6>
+                </div>
+                </div>
+            </div>
+    
+    <br>
+    <div class="proudly_supports">
+    <div class="supports_statements">
+    <h1 class="flex justify-center text-2xl font-bold font-serif">ExpressVPN is proudly supporting</h1>
+    <ul class="supported_ones pt-12">
+        <li><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://s22908.pcdn.co/wp-content/themes/newspaper-child/images/proudly/logo_1.png" alt="open_media"></li>
+        <li><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://s22908.pcdn.co/wp-content/themes/newspaper-child/images/proudly/logo_2.png" alt="Inernet_Defense_league"></li>
+        <li><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://s22908.pcdn.co/wp-content/themes/newspaper-child/images/proudly/logo_3.png" alt="Fight_for_future"></li>
+        <li><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://s22908.pcdn.co/wp-content/themes/newspaper-child/images/proudly/logo_4.png" alt="access_now"></li>
+    </ul>
+    </div>
+    </div>
+
+    <div class="subscribe-section">
+        <div class="subscribe-container">
+            <h2>Subscribe to the blog newsletter</h2>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- --------------footer--------------- -->
+<div class="footer">
+    <div class="col1">
+        <div class="Download">
+        <ul style="font-family: serif;">
+
+       <li><h1>Download VPN</h1></li>
+       <li>Mac VPN</li>
+       <li>Windows PC VPN</li>
+       <li>iPhone VPN(iOS)</li>
+       <li>Android VPN</li>
+       <li>Linux VPN</li>
+       <li>Router VPN</li>
+       <li>Apple TV VPN</li>
+       <li>Fire Stick VPN</li>
+       <li>Android TV VPN</li>
+       <li>VPN Chrome Extension</li>
+    </ul>
+    </div>
+        <div class="Features">
+            <ul style="font-family: serif;">
+                <li><h1>Features</h1></li>
+                <li>Risk-Free VPN Trial</li>
+                <li>Reality TV VPN</li>
+                <li>Plans and Pricing</li>
+                </ul>
+                
+        </div>
+    </div>
+    <div class="col2">
+        <div class="countries">
+            <ul style="font-family: serif;">
+                <li><h1>105 Countries</h1></li>
+                <li>US VPN</li>
+                <li>UK VPN</li>
+                <li>Canada VPN</li>
+                <li>Australia VPN</li>
+                </ul>
+        </div>
+
+        <div class="products">
+            <ul style="font-family: serif;">
+                <li><h1>Products</h1></li>
+                <li>Keys Password Manager</li>
+                <li>Aircove Router</li>
+            </ul>
+           
+        </div>
+
+        <div class="tools">
+            <ul style="font-family: serif;">
+                <li><h1>Tools</h1></li>
+                <li>What is My IP?</li>
+                <li>Password Generator</li>
+            </ul>
+       
+        </div>
+
+    </div>
+    <div class="col3">
+        <div class="about">
+            <ul style="font-family: serif;">
+                <li><h1>About ExpressVPN</h1></li>
+                <li>Trust Center</li>
+                <li>Rights Center</li>
+                <li>Security Audits</li>
+                <li>ExpressVPN Reviewa</li>
+                <li>Our Experts</li>
+                <li>Press</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="programs">
+            <ul style="font-family: serif;">
+                <li><h1>Programs</h1></li>
+                <li>Affiliates</li>
+                <li>Influencers</li>
+                <li>Partners</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col4">
+<div class="support_center">
+    <ul style="font-family: serif;">
+        <li><h1>Support Center</h1></li>
+        <li>VPN Setup Tutorials</li>
+        <li>FAQ</li>
+        <li>Contact Us</li>
+        <li>Buy VPN</li>
+          </ul>
+</div>
+<div class="learn_more">
+    <ul style="font-family: serif;">
+        <li><h1>Learn More</h1></li>
+        <li>What is a VPN?</li>
+        <li>Top 5 VPN Uses</li>
+        <li>Blog</li>
+     </ul>
+
+</div>
+<div class="globe">
+    <i class="fa-solid fa-globe"></i> English
+</div>
+</div>
+</div> 
+<!-- ----------grand_footer------- -->
+<footer>
+<div class="f" style="
+background-color:#001827;
+color:#bcc3c8;
+height:80px;
+display: flex;
+align-items: center;">
+    
+    <div class="left2" style=" width: 70%;
+    height:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    font-size: small;">
+    <h6>© 2024 ExpressVPN. All rights reserved.</h6>
+    <h6>Privacy Policy</h6>
+    <h6>Terms of Service </h6>
+    <h6>Cookie Preferences</h6>
+    </div>
+
+    <div class="right2" style="width:30%;
+    height:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    font-size: medium;">
+        <i class="fa-brands fa-youtube"> </i>
+        <i class="fa-brands fa-linkedin-in"> </i>
+        <i class="fa-brands fa-twitter"> </i>
+        <i class="fa-brands fa-instagram"> </i>
+    </div>
+</div>
+</footer>
+</body>
+</html>
